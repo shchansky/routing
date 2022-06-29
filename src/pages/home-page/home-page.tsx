@@ -4,7 +4,7 @@ import type { Props } from "./home-page.types";
 export const HomePage = (props: Props) => {
   return (
     <div className={props.className}>
-      <h1>home page</h1>
+      <h1>Home page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
         asperiores error vel nulla tempore facilis eum recusandae tenetur

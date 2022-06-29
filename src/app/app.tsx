@@ -19,6 +19,10 @@ function App() {
           />
           <Route path="/about" element={<Pages.AboutPage />} />
           <Route path="/posts" element={<Pages.BlogPage />} />
+          <Route path="/posts/:id" element={<Pages.Singlepage />} />
+          <Route path="/posts/:id/edit" element={<Pages.EditPost />} />
+          <Route path="/posts/new" element={<Pages.CreatePost />} />
+
           <Route path="*" element={<Pages.NotFoundPage />} />
         </Route>
       </Routes>
