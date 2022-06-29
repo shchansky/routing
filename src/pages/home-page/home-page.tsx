@@ -1,8 +1,9 @@
 import React from "react";
+import type { Props } from "./home-page.types";
 
-export const HomePage = () => {
+export const HomePage = (props: Props) => {
   return (
-    <div>
+    <div className={props.className}>
       <h1>home page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
