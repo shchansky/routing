@@ -17,7 +17,7 @@ function App() {
             index
             element={<Pages.HomePage className="example-props-className" />}
           />
-          <Route path="about" element={<Pages.AboutPage />} />
+          <Route path="about/*" element={<Pages.AboutPage />} />
           {/**
            * replace - позволяет реализовать обычную переадресацию,
            * без сохранения в истории посещения адреса "/about-us"
