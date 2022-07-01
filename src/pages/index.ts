@@ -5,3 +5,5 @@ export * from "./blog-page";
 export * from "./single-page";
 export * from "./create-post";
 export * from "./edit-post";
+export * from "./login-page"
+

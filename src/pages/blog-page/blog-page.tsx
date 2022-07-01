@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 type Content = {
   id: number | string;
@@ -20,6 +20,7 @@ export const BlogPage = () => {
   return (
     <div>
       <h1>Blog page</h1>
+      <Link to="/posts/new">Add new post</Link>
       <p>
         {posts.map((post, index) => (
           <Link key={index} to={`/posts/${post.id}`}>

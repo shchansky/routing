@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 type Content = {
   id: number | string;
@@ -11,18 +11,33 @@ type Content = {
 export const Singlepage = () => {
   console.log(useParams());
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [post, setPost] = React.useState<Content | null>(null);
+
+  /** Переход на одну страницу назад*/
+  const goBack = () => navigate(-1);
+
+  /**
+   * Переход на домашнюю страницу
+   * {replace:true} -позволяет не записывать в историю движение от одной ссылки к другой,
+   * т.к. мне нужна только переадресация
+   * */
+  const goHome = () => navigate("/", { replace: true });
 
   React.useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((response) => response.json())
+
       .then((data) => setPost(data));
   }, [id]);
 
   return (
     <div>
       <h1>single-page</h1>
+      <button onClick={goBack}>Go back</button>
+      {/* Bad approach */}
+      <button onClick={goHome}>Go home</button>
       {post && (
         <>
           <h3>{post.title}</h3>
