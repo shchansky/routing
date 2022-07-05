@@ -7,7 +7,7 @@ export const CustomLink = (props: Props) => {
   const match = useMatch({ path: props.to, end: props.to.length === 1 });
 
   return (
-    <Link to={props.to} style={{ color: match ? "blue" : "orange" }}>
+    <Link to={props.to} style={{ color: match ? "red" : "gray" }}>
       {props.children}
     </Link>
   );

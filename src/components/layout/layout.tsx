@@ -7,12 +7,12 @@ export const Layout = () => {
   return (
     <>
       <Markup.Header>
+        <NavLink to="/">Home</NavLink>
         {/**
          * NavLink -добавляет по умолчанию класс active на активную ссылку,
          * также можно создать кастомный класс
          * (в остальном поведение идентично Link)
          */}
-        <NavLink to="/">Home</NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "active-link" : "")}
           to="/posts"
@@ -25,6 +25,7 @@ export const Layout = () => {
         {/** Outlet -ReactElement в который отрисовывается children */}
         <Outlet />
       </main>
+      <hr />
       <footer>footer</footer>
     </>
   );
