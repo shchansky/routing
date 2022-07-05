@@ -8,7 +8,7 @@ export const CreatePost = () => {
 
   return (
     <div>
-      <h1>Create post</h1>
+      <h1>Create post page</h1>
       {/** replace: true редирект на главную страницу без возможности вернуться назад */}
       <button onClick={() => signOut(() => navigate("/", { replace: true }))}>
         Log Out

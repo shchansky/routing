@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AuthContext = React.createContext<null | any>(null);
+const AuthContext = React.createContext<null | any>(null);
 
 export const AuthProvider: React.FC<{}> = ({ children }) => {
   const [user, setUser] = React.useState<string | null>(null);

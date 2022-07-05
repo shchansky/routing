@@ -3,21 +3,15 @@ import { NavLink, Outlet } from "react-router-dom";
 import { CustomLink } from "../custom-link";
 import * as Markup from "./layout.styles";
 
-/**
- * Outlet -это placeholder в который будет
- * отрисовываться динамически изменяющийся контент
- */
-
-/**
- * NavLink -добавляет по умолчанию класс active на активную ссылку,
- * также можно создать кастомный класс 
- * (в остальном поведение идентично Link)
- */
-
 export const Layout = () => {
   return (
     <>
-      <Markup.Header >
+      <Markup.Header>
+        {/**
+         * NavLink -добавляет по умолчанию класс active на активную ссылку,
+         * также можно создать кастомный класс
+         * (в остальном поведение идентично Link)
+         */}
         <NavLink to="/">Home</NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "active-link" : "")}
@@ -28,6 +22,7 @@ export const Layout = () => {
         <CustomLink to={"/about"}>About</CustomLink>
       </Markup.Header>
       <main>
+        {/** Outlet -ReactElement в который отрисовывается children */}
         <Outlet />
       </main>
       <footer>footer</footer>

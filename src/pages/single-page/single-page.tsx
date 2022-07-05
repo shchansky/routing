@@ -34,9 +34,13 @@ export const Singlepage = () => {
 
   return (
     <div>
-      <h1>single-page</h1>
+      <h1>Single page</h1>
       <button onClick={goBack}>Go back</button>
-      {/* Bad approach */}
+      {/**
+       * Плохой пример (лучше применить NavLink или  Link),
+       * goHome следовало применить для перехода на главную
+       * страницу после отправки формы
+       */}
       <button onClick={goHome}>Go home</button>
       {post && (
         <>
