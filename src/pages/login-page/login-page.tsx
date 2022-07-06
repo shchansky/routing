@@ -18,6 +18,7 @@ export const LoginPage = () => {
 
     const user = value;
 
+    /** Отправка пользователя на предудущее местоположение после аутентификации */
     signIn(user, () => navigate(fromPage, { replace: true }));
   };
 
