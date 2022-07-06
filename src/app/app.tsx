@@ -19,7 +19,7 @@ function App() {
           />
           <Route path="about/*" element={<Pages.AboutPage />} />
           {/**
-           * replace - позволяет реализовать обычную переадресацию,
+            * replace - позволяет реализовать обычную переадресацию,
            * без сохранения в истории посещения адреса "/about-us"
            * */}
           <Route path="about-us" element={<Navigate to="/about" replace />} />

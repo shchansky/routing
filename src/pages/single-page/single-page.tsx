@@ -9,7 +9,7 @@ type Content = {
 };
 
 export const Singlepage = () => {
-  console.log(useParams());
+  console.log("useParams()", useParams());
   const { id } = useParams();
   const navigate = useNavigate();
 

@@ -5,11 +5,13 @@ import { useAuth } from "../../hoc";
 export const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  console.log("location", location);
+  
   const { signIn } = useAuth();
 
   // @ts-ignore
   const fromPage = location.state?.from?.pathname || "/";
+ 
 
   const [value, setValue] = React.useState("");
 
@@ -18,7 +20,6 @@ export const LoginPage = () => {
 
     const user = value;
 
-    /** Отправка пользователя на предудущее местоположение после аутентификации */
     signIn(user, () => navigate(fromPage, { replace: true }));
   };
 
